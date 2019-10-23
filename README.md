@@ -6,4 +6,4 @@
 ### Optimizar imágenes
 ### Integración con Net service
 ### Mensaje automático de la pagina
-### Convertirla a React
+### Convertirla a React.js
