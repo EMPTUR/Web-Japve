@@ -78,6 +78,11 @@ section h4{
 
 }
 
+#sec-empresa p{
+	font-size: 18px;
+}
+
+
 /* Basic */
 
 	@-ms-viewport {
@@ -92,6 +97,9 @@ section h4{
 
 		html, body {
 			min-width: 320px;
+		}
+		#sec-empresa p{
+			font-size: 16px;
 		}
 
 	}
@@ -2093,7 +2101,7 @@ section h4{
 			display: block;
 			object-fit: cover;
 
-  			width: 300px;
+  			width: 100%;
   			height: 375px;
 		}
 
@@ -2143,13 +2151,12 @@ section h4{
 			.image #empresa {
 				width: 100%;
 				height: 450px;
-				object-fit:cover;
+				object-fit:contain;
 
 			}
 
 		.image p{
-			font-size: 18px;
-			color: #222;
+			font-size: 16px;
 		}
 
 	a.image {
@@ -2434,7 +2441,13 @@ section h4{
 			ul.pagination li:first-child {
 				padding-right: 0;
 			}
-
+			.image{
+				width: 100%;
+				object-fit: contain	;
+			}
+			.image p{
+				font-size: 16px;
+			}
 		}
 
 /* Table */
@@ -3409,6 +3422,7 @@ section h4{
 			font-size: 1.125em;
 		}
 
+
 		#header .icons {
 			text-align: right;
 		}
@@ -3492,7 +3506,7 @@ section h4{
 		}
 
 			#banner .image img {
-				height: 100%;
+				height: 500px;
 				-moz-object-fit: cover;
 				-webkit-object-fit: cover;
 				-ms-object-fit: cover;
