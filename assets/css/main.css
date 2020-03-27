@@ -72,6 +72,12 @@ input, select, textarea {
 	appearance: none;
 }
 
+section h4{
+		color: #111;
+		text-align: justify;
+
+}
+
 /* Basic */
 
 	@-ms-viewport {
@@ -1787,7 +1793,7 @@ input, select, textarea {
 		text-align: center;
 	}
 
-	
+
 
 	header p {
 		font-family: "Roboto Slab", serif;
@@ -2088,7 +2094,7 @@ input, select, textarea {
 			object-fit: cover;
 
   			width: 300px;
-  			height: 337px;
+  			height: 375px;
 		}
 
 		.image.left, .image.right {
@@ -2127,9 +2133,24 @@ input, select, textarea {
 			width: 100%;
 		}
 
+
 			.image.main img {
 				width: 100%;
+				max-height: 500px;
+				object-fit: cover;
 			}
+
+			.image #empresa {
+				width: 100%;
+				height: 450px;
+				object-fit:cover;
+
+			}
+
+		.image p{
+			font-size: 18px;
+			color: #222;
+		}
 
 	a.image {
 		overflow: hidden;
@@ -2608,6 +2629,7 @@ input, select, textarea {
 			opacity: 0.25;
 		}
 
+
 /* Mini Posts */
 
 	.mini-posts article {
@@ -2842,43 +2864,51 @@ input, select, textarea {
 			flex-shrink: 1;
 			margin: 0 0 6em 6em;
 			position: relative;
+
 			width: calc(33.33333% - 6em);
+
 		}
 
-			.posts article:before {
-				background: rgba(210, 215, 217, 0.75);
-				content: '';
-				display: block;
-				height: calc(100% + 6em);
-				left: -3em;
-				position: absolute;
-				top: 0;
-				width: 1px;
-			}
+		.posts article:before {
+			background: rgba(210, 215, 217, 0.75);
+			content: '';
+			display: block;
+			height: calc(100% + 6em);
+			left: -3em;
+			position: absolute;
+			top: 0;
+			width: 1px;
+		}
 
-			.posts article:after {
-				background: rgba(210, 215, 217, 0.75);
-				bottom: -3em;
-				content: '';
-				display: block;
-				height: 1px;
-				position: absolute;
-				right: 0;
-				width: calc(100% + 6em);
-			}
+		.posts article:after {
+			background: rgba(210, 215, 217, 0.75);
+			bottom: -3em;
+			content: '';
+			display: block;
+			height: 1px;
+			position: absolute;
+			right: 0;
+			width: calc(100% + 6em);
+		}
+
+
 
 			.posts article > :last-child {
 				margin-bottom: 0;
 			}
 
-			.posts article .image {
-				display: block;
+			 .posts article .image {
+				display: flex;
 				margin: 0 0 2em 0;
 			}
 
 				.posts article .image img {
 					display: block;
 					width: 100%;
+				}
+
+				.posts article h3{
+					margin-top: 20px;
 				}
 
 		@media screen and (min-width: 1681px) {
@@ -2972,13 +3002,18 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			.posts {
-				margin: 0 0 2em 0;
+				margin: 0 0 2em -1em;
 				width: 100%;
+
 			}
 
 				.posts article {
 					margin: 0 0 4.5em 0;
+					display: block;
 					width: 100%;
+					}
+				.posts article .image{
+
 				}
 
 					.posts article:before {
@@ -2996,6 +3031,14 @@ input, select, textarea {
 						.posts article:last-child:after {
 							display: none;
 						}
+				.posts article p{
+						text-align: justify;
+					width: 100%;
+					font-size: 15px;
+				}
+				.posts article h3{
+					text-align: center;
+				}
 
 		}
 
@@ -3186,12 +3229,13 @@ input, select, textarea {
 			display: block;
 			height: 7.5em;
 			left: 26em;
+			background-color: rgba(255,255,255,0.5);
 			line-height: 7.5em;
 			outline: 0;
 			overflow: hidden;
 			position: absolute;
 			text-align: center;
-			text-indent: 7.5em;
+			text-indent: 7.7em;
 			top: 0;
 			width: 6em;
 			z-index: 10000;
@@ -3212,7 +3256,7 @@ input, select, textarea {
 
 			#sidebar .toggle:before {
 				content: '\f0c9';
-				font-size: 2rem;
+				font-size: 2rem;toggle
 				height: inherit;
 				left: 0;
 				line-height: inherit;
@@ -3314,6 +3358,7 @@ input, select, textarea {
 			#sidebar .toggle {
 				text-indent: 7.25em;
 				width: 7.25em;
+
 			}
 
 				#sidebar .toggle:before {
@@ -3405,10 +3450,12 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		text-align: center;
 	}
 
 		#banner h1 {
-			margin-top: -0.125em;
+			margin-top: 0.75em;
+
 		}
 
 		#banner .content {
@@ -3433,8 +3480,15 @@ input, select, textarea {
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
 			display: block;
-			margin: 0 0 2em 4em;
+			margin: 0 0 0em 4em;
 			width: 50%;
+		}
+
+		#banner li{
+			margin-left: 30%;
+			margin-right: 30%;
+			width: 60%;
+
 		}
 
 			#banner .image img {
@@ -3442,11 +3496,12 @@ input, select, textarea {
 				-moz-object-fit: cover;
 				-webkit-object-fit: cover;
 				-ms-object-fit: cover;
-				object-fit: cover;
+				object-fit: contain;
 				-moz-object-position: center;
 				-webkit-object-position: center;
 				-ms-object-position: center;
 				object-position: center;
+				margin: 0;
 				width: 100%;
 			}
 
@@ -3572,6 +3627,7 @@ input, select, textarea {
 					transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 					color: #9fa3a6;
 					content: '\f078';
+
 					position: absolute;
 					right: 0;
 				}
@@ -3618,3 +3674,62 @@ input, select, textarea {
 			margin-top: 0;
 			padding-top: 0;
 		}
+
+/* WIDGET */
+
+			#js_widget {
+			  background: #EEE;
+			}
+			.ie-common-widget .ie-reviews{
+			}
+
+			.widget-javi{
+			  font-family: 'Font Awesome 5 Free';
+				text-align: center;
+				width: 100%;
+				border-radius: 20px;
+				border-bottom: 2px ;
+			}
+
+
+				.widget-javi .star-head{
+					margin-left: 2%
+				}
+				.widget-javi div {
+					padding: 5px;
+
+				}
+
+				.widget-javi .portal-by{
+
+				}
+
+				.widget-javi strong{
+					color: #ff5733;
+					margin-left: 4px;
+					margin-top: 3px;
+				}
+
+				.widget-javi p span{
+					display: inline-flex;
+					color: #ff5733;
+					font-weight: bold;
+					margin-right: 5px;
+					font-style: normal;
+				}
+
+				.widget-javi p{
+					font-style: italic;
+				}
+
+				.widget-javi a{
+					color: #333;
+
+				}
+				.rev-explain {
+					margin-top: 10px;
+				}
+
+					.widget-javi a img{
+						display: none;
+					}

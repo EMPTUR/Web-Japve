@@ -31,6 +31,8 @@
 				}, 100);
 			});
 
+
+
 		// ... stopped resizing.
 			var resizeTimeout;
 
@@ -237,6 +239,7 @@
 
 
 	// Menu.
+
 		var $menu = $('#menu'),
 			$menu_openers = $menu.children('ul').find('.opener');
 
@@ -259,6 +262,14 @@
 
 				});
 
+			});
+
+			$(document).ready(function(){
+				$("a").click(function(){
+					$('html','body').animate({
+							scrollTop: $('#Contacto').offset().top
+					},'slow');
+				});
 			});
 
 })(jQuery);
